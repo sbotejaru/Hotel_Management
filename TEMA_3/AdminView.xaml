@@ -1,0 +1,27 @@
+﻿<Window x:Class="TEMA_3.AdminView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TEMA_3"
+        mc:Ignorable="d"
+        Title="AdminView" Height="420" Width="270">    
+    <Grid Margin="0,0,2,0">
+        <Button Content="Manage Users" HorizontalAlignment="Left" Margin="63,105,0,0" VerticalAlignment="Top" Width="127" Command="{Binding ManageUsers}" Visibility="{Binding MenuVis}"/>
+        <Label Content="Welcome," HorizontalAlignment="Left" Margin="53,37,0,0" VerticalAlignment="Top" Width="94" Visibility="{Binding MenuVis}"/>
+        <Label Content="{Binding CurrentAdminName}" HorizontalAlignment="Left" Margin="119,37,0,0" VerticalAlignment="Top" Width="141" Height="26" Visibility="{Binding MenuVis}"/>
+        <Button Content="Manage Customers" HorizontalAlignment="Left" Margin="63,151,0,0" VerticalAlignment="Top" Width="127" Command="{Binding ManageCustomers}" Visibility="{Binding MenuVis}"/>
+        <Button Content="Manage Employees" HorizontalAlignment="Left" Margin="63,197,0,0" VerticalAlignment="Top" Width="127" Command="{Binding ManageEmployees}" Visibility="{Binding MenuVis}"/>
+        <Button Content="Manage Bookings" HorizontalAlignment="Left" Margin="63,244,0,0" VerticalAlignment="Top" Width="127" Command="{Binding ManageBookings}" Visibility="{Binding MenuVis}"/>
+        <Button Content="Manage Rooms" HorizontalAlignment="Left" Margin="63,289,0,0" VerticalAlignment="Top" Width="127" Command="{Binding ManageRooms}" Visibility="{Binding MenuVis}"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Width="50" Command="{Binding BackCommand}" Visibility="{Binding BackVis}"/>
+        <Button Content="Create User" Margin="70,73,70.4,283.8" Visibility="{Binding UserVis}" Command="{Binding CreateUserCommand}"/>
+        <Button Content="Read All Users" Margin="70,130,69.4,226.8" Visibility="{Binding UserVis}" Command="{Binding ReadAllUsersCommand}"/>
+        <Button Content="Create Customer" Margin="70,73,70,283.8" Visibility="{Binding CustomerVis}" Command="{Binding CreateCustomerCommand}"/>
+        <Button Content="Read All Customers" Margin="70,130,69,226.8" Visibility="{Binding CustomerVis}" Command="{Binding ReadAllCustomersCommand}"/>
+        <Button Content="Create Employee" Margin="70,73,69.6,283.8" Visibility="{Binding EmployeeVis}" Command="{Binding CreateEmployeeCommand}"/>
+        <Button Content="Read All Employees" Margin="70,130,68.6,226.8" Visibility="{Binding EmployeeVis}" Command="{Binding ReadAllEmployeesCommand}"/>
+        <Button Content="Create Room" Margin="70,73,69.6,283.8" Visibility="{Binding RoomVis}" Command="{Binding CreateRoomCommand}"/>
+        <Button Content="Read All Rooms" Margin="70,130,68.6,226.8" Visibility="{Binding RoomVis}" Command="{Binding ReadAllRoomsCommand}"/>
+    </Grid>
+</Window>

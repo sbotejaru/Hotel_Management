@@ -1,0 +1,20 @@
+﻿<Window x:Class="TEMA_3.Views.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TEMA_3"
+        mc:Ignorable="d"
+        Title="LoginView" Height="190" Width="222">
+
+    <Grid>
+        <Label Content="Username:" HorizontalAlignment="Left" Margin="13,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="13,41,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="84,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Username}"/>
+        <TextBox HorizontalAlignment="Left" Margin="84,49,0,0" VerticalAlignment="Top" Width="120" Text="{Binding Password}"/>
+        <Button Content="Login" HorizontalAlignment="Left" Margin="84,82,0,0" VerticalAlignment="Top" Command="{Binding LoginCommand}" />
+        <Label HorizontalAlignment="Left" Margin="32,119,0,0" VerticalAlignment="Top" Content="{Binding LoginStatus}" Height="25" Width="151"/>
+
+
+    </Grid>
+</Window>

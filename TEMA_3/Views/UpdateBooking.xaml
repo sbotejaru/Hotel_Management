@@ -1,0 +1,19 @@
+﻿<Window x:Class="TEMA_3.Views.UpdateBooking"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TEMA_3"
+        mc:Ignorable="d"
+        Title="UpdateBooking" Height="400" Width="300">
+    <Grid>
+        <Label Content="Room Nr" Margin="10,32,207,303"/>
+        <DatePicker Margin="90,85,23,250" SelectedDate="{Binding DateFrom}"/>
+        <Button Content="Submit" Margin="109,213,113,129.8" Command="{Binding SubmitBookingUpdateCommand}"/>
+        <TextBox Margin="90,32,23,303" Text="{Binding RoomNr}"/>
+        <DatePicker Margin="90,139,23,196" SelectedDate="{Binding DateTo}"/>
+        <Label Content="Date From" Margin="10,84,207,251"/>
+        <Label Content="Date To" Margin="10,139,207,196"/>
+        <Label Content="Please insert Room Number!" Margin="55,284,40,51" Foreground="Red" Visibility="{Binding ErrorVis}"/>
+    </Grid>
+</Window>

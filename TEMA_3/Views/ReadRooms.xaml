@@ -1,0 +1,15 @@
+﻿<Window x:Class="TEMA_3.Views.ReadRooms"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TEMA_3"
+        mc:Ignorable="d"
+        Title="ReadRooms" Height="450" Width="380">
+    <Grid>
+        <DataGrid x:Name="Data_Grid" HorizontalAlignment="Left" Height="313" Margin="0,106,0,0" VerticalAlignment="Top" ItemsSource="{Binding CurrentRoomList}" SelectedIndex="{Binding SelectedUser}" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible">
+        </DataGrid>
+        <Button Content="Delete Room" HorizontalAlignment="Left" Margin="200,61,0,0" VerticalAlignment="Top" Width="100" Command="{Binding DeleteRoomCommand}"/>
+        <Button Content="Update Room" HorizontalAlignment="Left" Margin="30,61,0,0" VerticalAlignment="Top" Width="101"  Command="{Binding UpdateRoomCommand}"/>
+    </Grid>
+</Window>
